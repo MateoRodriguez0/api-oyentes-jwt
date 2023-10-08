@@ -6,15 +6,29 @@ Contribuye a la creacion de un proyecto spring boot con el proposito de implemen
 
 tiene como objetivo realizar las operaciones necesarias para los usuarios oyentes de la app en la base de datos.
 
-## Datasource
-``` java
+## port 
+```java
 spring.application.name=servicio-oyentes
 server.port=8003
+```
+
+## Datasource and pool connection 
+``` java
 
 spring.datasource.url=jdbc:mysql://localhost:3306/appmusic?useSSL=false&serverTimezone=America/Bogota&AllowpublicKeyRetrieval=true
 spring.datasource.username=root
 spring.datasource.password=
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+spring.jpa.generate-ddl=false
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+spring.jpa.show-sql=false
+spring.jpa.open-in-view=true
+
+spring.datasource.hikari.pool-name=coneccionOyentes
+spring.datasource.hikari.maximum-pool-size=30
+spring.datasource.hikari.connection-timeout=45000
 
 ```
 
