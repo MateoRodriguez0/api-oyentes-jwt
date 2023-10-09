@@ -1,5 +1,5 @@
 
-# MusicApp(API OYENTES) 
+# Api Restful of isteners & Spring Data JPA for MusicApp 
 Esta es una api que gestiona algunas peticiones para los oyentes de una app de musica.
 Contribuye a la creacion de un proyecto spring boot con el proposito de implementar spring security jWT.
 
