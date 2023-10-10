@@ -37,7 +37,7 @@ spring.datasource.hikari.connection-timeout=45000
 ## Requeriments
 - Java 17 o una version superior.
 - MySQL 8
-
+- Lombock 
 
 
 ## Instalation
