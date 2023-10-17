@@ -1,6 +1,5 @@
 package com.appmusica.oyentes.controllers;
 
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -10,7 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.appmusica.oyentes.models.Favorita;
 import com.appmusica.oyentes.services.OyenteServices;
 
 
@@ -33,7 +31,7 @@ public class OyenteController {
 	 * @return ResponseEntity con la lista de Favoritas en el body.
 	 */
 	@GetMapping(value = "/listar/{id}")
-	public ResponseEntity<List<Favorita>> listFavoritas (@PathVariable(name = "id") Long id){
+	public ResponseEntity<?> listFavoritas (@PathVariable(name = "id") Long id){
 		
 		
 		return ResponseEntity.ok(oyenteServices.getFavoritas(id));
@@ -56,7 +54,7 @@ public class OyenteController {
 			return ResponseEntity.ok("Se ha eliminado la cancion de favoritos");
 		}
 		
-		return ResponseEntity.unprocessableEntity().body("No se pudo eliminar la cancion de favoritos");
+		return ResponseEntity.ok("No se pudo eliminar la cancion de favoritos");
 		
 		
 	}
@@ -77,7 +75,7 @@ public class OyenteController {
 			return ResponseEntity.ok("Se ha agregado a favoritas");
 		}
 		
-		return ResponseEntity.unprocessableEntity().body("No se pudo agregar la cancion a favoritos");
+		return ResponseEntity.ok("No se pudo agregar la cancion a favoritos");
 	}
 	
 	
@@ -90,7 +88,8 @@ public class OyenteController {
 	 * @return ResponseEntity con la cancion favorita en el body.
 	 */
 	@GetMapping(value = "/search/{idoyente}/{idfavorita}")
-	public ResponseEntity<Favorita> getfavorita( @PathVariable(name = "idoyente")Long idoyente ,@PathVariable(name = "idfavorita") Long idFavorita){
+	public ResponseEntity<?> getfavorita( @PathVariable(name = "idoyente")Long idoyente ,
+			@PathVariable(name = "idfavorita") Long idFavorita){
 		
 		return ResponseEntity.ok(oyenteServices.verFavorita(idoyente, idFavorita));
 	}
