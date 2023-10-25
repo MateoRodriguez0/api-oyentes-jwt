@@ -1,5 +1,5 @@
 
-# Api Restful of isteners & Spring Data JPA for MusicApp 
+# Api Restful of listeners & Spring Data JPA for MusicApp 
 Esta es una api que gestiona algunas peticiones para los oyentes de una app de musica.
 Contribuye a la creacion de un proyecto spring boot con el proposito de implementar spring security jWT.
 
@@ -121,3 +121,10 @@ luego de seguir los pasos anteriores solo faltaria ejecutar nuestro proyecto y p
     }
 ]
 ```
+
+
+## Tambien puedes mirar
+
+ - [Api Restful of artist & Spring Data JPA for MusicApp](https://github.com/MateoRodriguez0/api-artistas-jwt)
+ - [Music application with microservices](https://github.com/MateoRodriguez0/spring-security-jwt)
+
